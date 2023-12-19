@@ -1,0 +1,44 @@
+body {
+  margin:0.5em;
+  font-family:'Kalnia', serif;
+}
+
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; 
+  background-color: darkgray;
+}
+.left-section{
+  display: flex;
+  align-items: center;
+}
+.logo-wrapper{
+  flex: 0 0 auto;
+  
+}
+.logo-image{
+  max-width: 80px;
+  max-height: 50px;
+  margin-bottom: 20px;
+}
+.title-wrapper{
+  flex: 0 0 auto;
+  margin-left: 5px;
+}
+h4{
+  margin-top: -17px;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+}
+.link-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+a {
+  text-decoration: none;
+  color: #632102;
+}
