@@ -1,8 +1,8 @@
 body {
   margin:0.5em;
-  font-family:'Kalnia', serif;
+  font-family: 'Noto Serif', serif;
+  overflow: hidden;
 }
-
 .navbar-container{
   display: flex;
   align-items: center;
@@ -28,17 +28,58 @@ body {
   margin-left: 5px;
 }
 h4{
+  font-family:'Kalnia', serif;
+  font-weight: bolder;
   margin-top: -17px;
 }
 .right-section {
   display: flex;
   align-items: center;
+  margin-left: 7em;
+  margin-top: -10px;
 }
-.link-wrapper{
+
+/*.links-wrapper{
   display: flex;
   justify-content: flex-end;
-}
-a {
+}*/
+
+.links-wrapper a{
+  margin-right: 2em;
+  font-weight: 450;
   text-decoration: none;
-  color: #632102;
+  color: #540d00;
+  padding-top: 10px;
+}
+.menu-btn {
+  padding: 8px 12px;
+  background-color: #540d00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hide the toggle menu button by default */
+}
+/*media query for responsiveness */
+@media screen and (min-width: 601px) {
+  .right-section .link-wrapper {
+    display: flex;
+  }
+  .links-wrapper a{
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
+@media screen  and (max-width: 600px) {
+  .links-wrapper a {
+    display: none; /* Hide links on smaller screens */
+  }
+  .right-section{
+    display: flex;
+  }
+  .menu-btn{
+    display: block;
+  }
+  .hidden-links.show-links {
+    display: block;
+  }
 }
