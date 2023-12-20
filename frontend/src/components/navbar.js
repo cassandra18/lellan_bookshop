@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom"
+import ToggleMenu from "./toggleMenu";
 import bookshopLogo from "../assets/images/bookshop_logo.jpeg";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
+  const menuItems = [
+    { label: 'Home', link: '/'},
+    { label: 'Our services', link: '/our-services'},
+    { label: 'Contact', link: '/contact'},
+    { label: 'Lelann stores', link: '/lelann-stores'},
+    { label: 'About Us', link: '/about-us'},
+    { label: 'Need help shopping online?', link: '/help'}
+  ]
 
   return (
     <div className="navbar-container">
@@ -23,16 +27,14 @@ const Navbar = () => {
 
       <div className="right-section">
         <div className="links-wrapper">
-          <a href="/" className="home-link">Home</a>
-          <button className="menu-btn" onClick={toggleMenu}>Menu</button>
-          <div className={`hidden-links ${showMenu ? 'show-links': ""}`}>
+            <a href="/" className="home-link">Home</a>
             <a href="/lelann-stores" className="lelann-stores">Lelann stores</a>
             <a href="/contact" className="contact">Contact</a>
             <a href="/about-us" className="about-us">About Us</a>
             <a href="/services" className="services">Our services</a>
             <a href="/help" className="help-shopping-online">Need help shopping online?</a>
-          </div>
         </div>
+        <ToggleMenu menuItems={menuItems} />
       </div>
     </div>
   );
