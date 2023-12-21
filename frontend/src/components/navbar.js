@@ -20,21 +20,23 @@ const Navbar = () => {
           <img className="logo-image" src={bookshopLogo} alt="Bookshop Logo" />
         </div>
         <div className="title-wrapper">
-          <h4>Lelann</h4>
-          <h4>Bookshop</h4>
+          <Link to="/" className="home-link">
+            <h4>Lelann</h4>
+            <h4>Bookshop</h4>
+          </Link>
         </div>
       </div>
 
       <div className="right-section">
         <div className="links-wrapper">
-            <a href="/" className="home-link">Home</a>
-            <a href="/lelann-stores" className="lelann-stores">Lelann stores</a>
-            <a href="/contact" className="contact">Contact</a>
-            <a href="/about-us" className="about-us">About Us</a>
-            <a href="/services" className="services">Our services</a>
-            <a href="/help" className="help-shopping-online">Need help shopping online?</a>
+          <Link to="/" className="home-link">Home</Link>
+          <Link to="/lelann-stores" className="lelann-stores">Lelann stores</Link>
+          <Link to="/contact" className="contact">Contact</Link>
+          <Link to="/about-us" className="about-us">About Us</Link>
+          <Link to="/our-services" className="services">Our services</Link>
+          <Link to="/help" className="help-shopping-online">Need help shopping online?</Link>
         </div>
-        <ToggleMenu menuItems={menuItems} />
+        <ToggleMenu className="toggle-menu" menuItems={menuItems} />
       </div>
     </div>
   );

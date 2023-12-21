@@ -51,25 +51,24 @@ h4{
   text-decoration: none;
   color: #540d00;
   padding-top: 10px;
-}
-.menu-btn {
-  padding: 8px 12px;
-  background-color: #540d00;
-  color: white;
-  border: none;
   cursor: pointer;
-  display: none; /* Hide the toggle menu button by default */
 }
-/*media query for responsiveness */
+
+/*media query for large screens */
 @media screen and (min-width: 601px) {
   .right-section .link-wrapper {
     display: flex;
+  }
+  .toggle-menu {
+    display: none;
   }
  /* .links-wrapper a{
     display: inline-block;
     margin-left: 1em;
   }*/
 }
+
+/*media query for small screen */
 @media screen  and (max-width: 600px) {
   .links-wrapper a {
     display: none; /* Hide links on smaller screens */
@@ -77,10 +76,15 @@ h4{
   .right-section{
     display: flex;
   }
-  .menu-btn{
-    display: block;
+  .toggle-menu .MuiSvgIcon-root{
+    display: bock;
+    color: #540d00;
+    font-size: 1.2em;
+
   }
-  .hidden-links.show-links {
-    display: block;
+  .toggle-menu .MuiMenuItem-root {
+    padding: 8px 12px;
+    color: #540d00 !important;
+    cursor: pointer;
   }
 }

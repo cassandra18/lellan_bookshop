@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { IconButton, Menu,MenuItem } from '@material-ui/core';
+import { IconButton, Menu, MenuItem } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
 
-const ToggleMenu = ({ menuItems }) => {
+const ToggleMenu = ({ menuItems, className }) => {
     const [anchorE1, setAnchorE1] = useState(null);
 
     const handleMenuOpen = (event) => {
+        console.log('Menu opened');
         setAnchorE1(event.currentTarget);
     };
 
@@ -15,7 +16,7 @@ const ToggleMenu = ({ menuItems }) => {
     };
 
     return (
-        <div>
+        <div className={className}>
             <IconButton onClick={handleMenuOpen}>
                 <MenuIcon />
             </IconButton>
@@ -26,8 +27,8 @@ const ToggleMenu = ({ menuItems }) => {
             >
                 {menuItems.map((item, index) => (
                     <MenuItem key={index} onClick={handleMenuClose}>
-                        <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {item.label}
+                        <Link to={item.link} style={{ textDecoration: 'none', color: '#540d00' }}>
+                            {item.label}
                         </Link>
                     </MenuItem>
                 ))}
