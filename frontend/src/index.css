@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px; 
-  background-color: darkgray;
+  background-color: rgb(199, 197, 197);
 }
 .left-section{
   display: flex;
@@ -26,6 +26,10 @@ body {
 .title-wrapper{
   flex: 0 0 auto;
   margin-left: 5px;
+}
+.home-link {
+  text-decoration: none;
+  color: #000;
 }
 h4{
   font-family:'Kalnia', serif;
