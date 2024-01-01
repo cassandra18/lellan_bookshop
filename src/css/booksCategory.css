@@ -1,0 +1,16 @@
+.general-books-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+.general-books-wrapper h3 {
+    text-decoration: none;
+    font-family: 'Kalnia', serif;;
+}
+
+.general-books-wrapper {
+    background-color: rgb(230, 232, 234);
+    width: 100px;
+    display: flex;
+    border-radius: 10px;
+}
